@@ -1,0 +1,25 @@
+.TIPO INVESTIMENTO
+	- Grande parte dos investimentos são CDBs
+	- Apenas CDB tem o indexador IPCA e CDI
+	- CDB tem (muito) mais opções de pré-fixados
+	- Grande parte dos CDBs são de 5k de valor mínimo
+	- Os valores mais comuns de valor mínimo é de 10k seguido de 1k
+	- CDBs são os únicos que podem ser resgatados diariamente
+	- CDBs na maioria vencem entre 500-1k dias
+	- LCI e LCA são os únicos que tem a maioria do vencimento entre 0-503
+
+.CARÊNCIA
+	- 95% dos investimentos só podem ser retirados na data de vencimento
+	- Todos os resgates são liquidados no dia
+
+.INDEXADOR
+	- A maior parte dos indexadores são pré-fixados, seguido de IPCA
+	- a maior parte dos investimentos de no mínimo 1k estão em produtos pré-fixados
+	- Produtos de 5k estão mais dispiniveis em IPCA e PRE
+
+.VENCIMENTO
+	- Os produtos tem uma média de 856 dia de vencimento e estão concentradas entre 300-1200 dias
+
+.VALOR DE APLICAÇÃO
+	- O valor mínimo de aplicação mais comum é 5k, seguido de 1k e depois 10k
+
