@@ -1,0 +1,26 @@
+.RESGATE
+	- 99% dos fundos tem resgate diário
+
+.FAMILIA
+	- A maior parte dos fundos são de renda fixa, cerca de 50% a mais
+	- Todos os fundos de renda variavél tem o risco ativo 5
+	- A maior parte dos fundos de renda fixa tem risco ativo de 4
+	- Apenas 1 fundo tem risco ativo 0
+	- Todos os fundos com valor mínimo de aplicação de 30R$ estão em renda fixa
+
+.RISCO
+	- O risco predominante é 5, seguido de 4 e 3
+	- risco 3 é onde tem mais fundos com valor mínimo de 3k (proporcionalmente)
+
+.APLICAÇÃO MÍNIMA
+	- 5k é a aplicação mais comum, seguido de 1k e 10k
+	- Existem um número consideravél com valores iniciais menores que 500
+
+.VALOR DE PERMANENCIA
+	- A maior parte dos fundoes tem um mínimo de 1k ou 5k como valor de permanência
+
+.DIAS UTEIS PARA RESGATE
+	- A maior parte dos fundos liberam o resgate em 32, 31 e 1 dias, respectivamente
+
+.RENDIMENTO ANUAL
+	- Varia bastante, porém a maior parte dos fundos tem uma média de 1.5M por ano com um SD de 2.6M
