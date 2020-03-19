@@ -37,7 +37,7 @@ class ClusterModel():
         return self.components
     
     def kmeans_cluster(self):
-        y = []
+        result = []
         for nb in self.nb_centroids:
             df_cluster = self.df.copy()
             km = KMeans(n_clusters=nb)
@@ -45,7 +45,7 @@ class ClusterModel():
             pred = km.predict(self.components)
             
             df_cluster['cluster']= pred 
-            y.append(df_cluster)
+            result.append(df_cluster)
         
-        return y, km
+        return result, km
     
