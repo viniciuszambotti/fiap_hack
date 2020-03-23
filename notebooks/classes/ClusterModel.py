@@ -6,9 +6,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from category_encoders import OneHotEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.cluster import KMeans, AffinityPropagation
+from sklearn.cluster import KMeans, AffinityPropagation, MeanShift, estimate_bandwidth
 
-class ClusterModel():    
+class ClusterModel():
+    
     def __init__(self, df, pca_percent=.95, nb_centroids=[4, 8, 16]):
         self.df = df
         self.pca_percent = pca_percent
@@ -50,7 +51,7 @@ class ClusterModel():
         return result, km
     
     def affinity_propagation(self):
-        af = AffinityPropagation(verbose=True, max_iter=1000, damping=0.9).fit(self.components)
+        af = AffinityPropagation(verbose=True, max_iter=3000, damping=0.8).fit(self.components)
         cluster_centers_indices = af.cluster_centers_indices_
         labels = af.labels_
         n_clusters = len(cluster_centers_indices)
@@ -58,5 +59,17 @@ class ClusterModel():
         df_cluster['cluster'] = labels
         
         return df_cluster, af, cluster_centers_indices, labels, n_clusters
+    
+    def mean_shift(self):
+        # The following bandwidth can be automatically detected using
+        bandwidth = estimate_bandwidth(self.components, quantile=0.2, n_samples=self.df.shape[0])
+        model = MeanShift(bandwidth=bandwidth, bin_seeding=True)
+        model.fit(self.components)
+        labels = model.labels_
+        df_cluster = self.df.copy()
+        df_cluster['cluster'] = labels
+        
+        return df_cluster, model
+        
 
     
