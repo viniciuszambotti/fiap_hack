@@ -17,10 +17,10 @@ class ClusterModel():
         self.do_pca = do_pca
         
         if self.do_pca:
-            self.do_pca()
+            self.pca()
             
     
-    def do_pca(self):
+    def pca(self):
         pipe = Pipeline([
             ('ohe',OneHotEncoder()),
             ('Scaler',StandardScaler()),
